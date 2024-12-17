@@ -1,7 +1,7 @@
 // File of my own custom functions
 
 // define backend url to the variables
-export const HOST = import.meta.env.VITE_SERVER_URL;
+export const HOST = "https://mythilink-chatapp-server.onrender.com";
 
 // define custom variable for the routes
 export const AUTH_ROUTES = "api/auth";
