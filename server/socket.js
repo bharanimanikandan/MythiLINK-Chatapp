@@ -4,6 +4,8 @@ import Message from "./models/MessagesModel.js";
 import Channel from "./models/ChannelModel.js";
 import dotenv from 'dotenv'
 
+dotenv.config();
+
 const setupSocket = (server) =>{
     const io = new SocketIOServer(server,{
         cors:{
