@@ -9,7 +9,7 @@ dotenv.config();
 const setupSocket = (server) =>{
     const io = new SocketIOServer(server,{
         cors:{
-            origin: process.env.ORIGIN,
+            origin: ["https://mythilink-chatapp-client.onrender.com"],
             methods: ["GET","POST"],
             credentials: true,
         }
