@@ -18,12 +18,24 @@ const app = express();
 const port = process.env.PORT || 3001;
 const databaseURL = process.env.DATABASE_URL;
 
+const allowedOrigins = ['http://localhost:5173', 'https://serene-torrone-032430.netlify.app']
 // Cors middleware
-app.use(cors({
-    origin: [process.env.ORIGIN],
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (e.g., Postman, cURL, same-origin requests)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.error("Blocked by CORS: ", origin);
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true,
-}))
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
+  })
+);
 
 // Multer middleware
 app.use("/uploads/profiles", express.static("uploads/profiles"))
