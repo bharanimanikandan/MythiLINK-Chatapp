@@ -47,7 +47,7 @@ app.use('/api/channel', channelRoutes)
 
 // Start the server
 const server = app.listen(port, ()=>{
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at https://localhost:${port}`);
 })
 
 // Socket.io setup
