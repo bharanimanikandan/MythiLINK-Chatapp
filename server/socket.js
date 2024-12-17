@@ -2,6 +2,7 @@ import { disconnect } from "mongoose";
 import {Server as SocketIOServer} from "socket.io"
 import Message from "./models/MessagesModel.js";
 import Channel from "./models/ChannelModel.js";
+import dotenv from 'dotenv'
 
 const setupSocket = (server) =>{
     const io = new SocketIOServer(server,{
