@@ -7,7 +7,7 @@ Mythilink Chat is a modern real-time chat application designed to provide seamle
 
 
 ## Snaps of our Application
-
+![image alt](https://github.com/bharanimanikandan/MythiLINK-Chatapp/blob/1735c7ef6af737732f5caa3e9ade5f00a7b9c457/MythiLINK.jpg?raw=true)
 
 ## Table of Contents
 1. [Features](#features)
