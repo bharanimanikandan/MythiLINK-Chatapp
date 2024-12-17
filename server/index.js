@@ -18,7 +18,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 const databaseURL = process.env.DATABASE_URL;
 
-const allowedOrigins = ['http://localhost:5173', 'https://serene-torrone-032430.netlify.app']
+const allowedOrigins = ['http://localhost:5173', 'https://mythilink-chatapp-client.onrender.com']
 // Cors middleware
 app.use(
   cors({
